@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace WeeklyChallenges
 {
@@ -7,22 +8,43 @@ namespace WeeklyChallenges
     {
         public bool CharacterIsALetter(char c)
         {
-            throw new NotImplementedException();
+            bool result;
+           result =char.IsLetter(c);
+            return result;
+
+           
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            throw new NotImplementedException();
+
+            return true;
+
         }
 
         public bool IsNumberEven(int number)
         {
-            throw new NotImplementedException();
+            
+            if ( number % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool IsNumberOdd(int num)
         {
-            throw new NotImplementedException();
+            if (num % 2 == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
@@ -42,7 +64,16 @@ namespace WeeklyChallenges
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            var even = 0;
+            foreach (var num in numbers)
+            {
+                if (num % 2 == 0)
+                { even = +num; } 
+            }
+
+            return even;
+           
+            
         }
 
         public bool IsSumOdd(List<int> numbers)
